@@ -1,0 +1,26 @@
+.benefits{
+	cursor: default;
+	&__inner{
+		padding: 65px 0;
+	}
+	&__title{
+		margin-bottom: 92px;
+	}
+	&__items{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(222px, 1fr));
+		gap: 75px;
+	}
+	&__item{
+		&-title{
+			margin-bottom: 24px;
+			@include fontText(Raleway, 25px, 500);
+			line-height: 35 / 25 * 100%;
+		}
+		&-icon{
+			margin-bottom: 37px;
+			display: inline-block;
+			font-size: 61px;
+		}
+	}
+}

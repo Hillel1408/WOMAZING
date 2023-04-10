@@ -1,0 +1,106 @@
+.footer{
+	cursor: default;
+	background-color: #F1EADC;
+	&__inner{
+		padding: 90px 0 100px 0;
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 700px){
+			flex-direction: column;
+		}
+	}
+	&__logo{
+		margin-bottom: 73px;
+		padding-top: 10px;
+		& a{
+			@media (max-width: 700px){
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		@media (max-width: 700px){
+			margin-bottom: 16px;
+		}
+	}
+	&__copyright{
+		&-text{
+			display: block;
+			margin-bottom: 6px;
+			@include fontText(Raleway, 13px, 400);
+			line-height: 18 / 13 * 100%;
+			color: black;
+		}
+	}
+	&__column{
+		@media (max-width: 700px){
+			text-align: center;
+		}
+	}
+	&__nav{
+		&-list{
+			display: flex;
+			flex-wrap: wrap;
+			@media (max-width: 700px){
+				display: none;
+			}
+		}
+		&-link{
+			display: block;
+			padding: 10px 20px;
+			@include fontText(Raleway, 15px, 400);
+			line-height: 21 / 15 * 100%;
+			color: black;
+			transition: color 0.3s ease 0s;
+			&._active{
+				color: #6E9C9F;
+			}
+			@media (any-hover: hover){
+				&:hover{
+					color: #6E9C9F;
+				}
+			}
+		}
+		&-subitem{
+			padding: 5px 20px;
+		}
+		&-sublist{
+			margin-top: 25px;
+		}
+		&-sublink{
+			@include fontText(Raleway, 13px, 400);
+			line-height: 18 / 13 * 100%;
+			color: black;
+		}
+		@media (max-width: 700px){
+			order: 1;
+		}
+	}
+	&__contacts{
+		text-align: right;
+		padding-top: 10px;
+		&-tel, &-mail{
+			color: black;
+			display: block;
+			@include fontText(Raleway, 15px, 400);
+			line-height: 21 / 15 * 100%;
+			margin-bottom: 9px;
+		}
+		&-socials{
+			margin-bottom: 30px;
+			& a{
+				font-size: 22px;
+				color: black;
+				margin: 0 6px;
+				transition: color 0.3s ease 0s;
+				@media (any-hover: hover){
+					&:hover{
+						color: #509498;
+					}
+				}
+			}
+		}
+		@media (max-width: 700px){
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,125 @@
+.slider{
+	cursor: default;
+	background: linear-gradient(to right, white 56%, #F1EADC 44%);
+	@media (max-width: $md3+px) {
+		background: linear-gradient(to right, #F1EADC 50%, #F1EADC 50%);
+	}
+	&__container{
+		display: flex;
+	}
+	&__content{
+		width: 56%;
+		padding-top: 265px;
+		padding-bottom: 190px;
+		position: relative;
+		padding-right: 20px;
+		& .slick{
+			&-dots{
+				bottom: 50px;
+				right: 265px; 
+				@media (max-width: $md1+px) {
+					left: 0;
+				}
+				@media (max-width: $md3+px) {
+					left: 0;
+					right: 0;
+					justify-content: center;
+				}
+			}
+		}
+		@media (max-width: $md3+px) {
+			width: 100%;
+			padding-right: 0;
+		}
+	}
+	&__img{
+		width: 44%;
+		position: relative;
+		& img{
+			&:nth-child(1){
+				margin-top: 120px;
+				margin-left: 50px;
+			}
+			&:nth-child(2){
+				position: absolute;
+				top: 230px;
+				left: 368px;
+			}
+			&:nth-child(3){
+				position: absolute;
+				bottom: 0;
+				left: -75px;
+			}
+		}
+		@media (max-width: $md3+px) {
+			display: none;
+		}
+	}
+	&__title{
+		max-width: 585px;
+		margin-bottom: 45px;
+		@media (max-width: $md3+px) {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	&__text{
+		@include adaptiv-font(20, 14, 1);
+		font-weight: 400;
+		line-height: 28 / 20 * 100%;
+		margin-bottom: 52px;
+		@media (max-width: $md1+px) {
+			text-align: left;
+		}
+		@media (max-width: $md3+px) {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	&__btn{
+		background-color: #6E9C9F;
+		position: relative;
+		margin-left: auto;
+		&::before{
+			content: '';
+			display: block;
+			width: 67px;
+			height: 100%;
+			position: absolute;
+			background-color: rgba(110, 156, 159, 0.1);
+			right: 100%;
+			@media (max-width: $md1+px) {
+				display: none;
+			}
+		}
+		&::after{
+			content: url('../img/slider/icon-4.png');
+			position: absolute;
+			left: -41px;
+			margin-top: 10px;
+			@media (max-width: $md1+px) {
+				display: none;
+			}
+		}
+		@media (max-width: $md1+px) {
+			margin-left: 0;
+			margin-right: auto;
+		}
+		@media (max-width: $md3+px) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	&__block{
+		&-wrapper{
+			max-width: 385px;
+			text-align: right;
+			@media (max-width: $md3+px) {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}

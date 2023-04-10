@@ -1,0 +1,108 @@
+.shop{
+	cursor: default;
+	margin-top: 269px;
+	padding-bottom: 130px;
+	&__title{
+		margin-bottom: 26px;
+	}
+	&__crumbs{
+		margin-bottom: 214px;
+	}
+	&__tubs{
+		display: flex;
+		margin-bottom: 82px;
+		flex-wrap: wrap;
+		justify-content: center;
+		&-link{
+			@include adaptiv-value(padding-top, 19, 11, 1);
+			@include adaptiv-value(padding-bottom, 19, 11, 1);
+			@include adaptiv-value(padding-left, 65, 35, 1);
+			@include adaptiv-value(padding-right, 65, 35, 1);
+			border: 1px solid black;
+			display: block;
+			color: black;
+			margin-bottom: 10px;
+			transition: all 0.3s ease 0s;
+			&._active{
+				background-color: black;
+				color: white;
+			}
+			@media (any-hover: hover){
+				&:hover{
+					background-color: black;
+					color: white;
+				}
+			}
+		}
+		&-item{
+			margin: 0 5px;
+		}
+	}
+	&__text{
+		@include fontText(Raleway, 17px, 500);
+		line-height: 24 / 17 * 100%;
+		color: #808080;
+		margin-bottom: 65px;
+	}
+	&__products{
+		margin-bottom: 65px;
+	}
+	&__nav{
+		display: flex;
+		justify-content: center;
+		&-link{
+			@include fontText(Raleway, 17px, 500);
+			line-height: 24 / 17 * 100%;
+			padding: 9px 17px;
+			border: 1px solid #000000;
+			color: black;
+			transition: all 0.3s ease 0s;
+			&._active{
+				background-color: black;
+				color: white;
+				cursor: default;
+			}
+			@media (any-hover: hover){
+				&:hover{
+					background-color: black;
+					color: white;
+				}
+			}
+		}
+		&-item{
+			&:not(:first-child){
+				margin-left: 14px;
+			}
+		}
+	}
+	&__block{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&-next{
+			transition: transform 0.3s ease 0s;
+			margin-left: 14px;
+			&::before{
+				content: url(../img/shop/1.png);
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					transform: scale(1.2);
+				}
+			}
+		}
+		&-prev{
+			transform: rotate(180deg);
+			transition: transform 0.3s ease 0s;
+			margin-right: 14px;
+			&::before{
+				content: url(../img/shop/1.png);
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					transform: rotate(180deg) scale(1.2);
+				}
+			}
+		}
+	}
+}

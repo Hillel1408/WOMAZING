@@ -1,0 +1,50 @@
+.contacts{
+	margin-top: 269px;
+	padding-bottom: 130px;
+	cursor: default;
+	&__title{
+		margin-bottom: 26px;
+	}
+	&__crumbs{
+		margin-bottom: 214px;
+	}
+	&__maps{
+		margin-bottom: 130px;
+	}
+	&__text{
+		margin-bottom: 19px;
+	}
+	&__inner{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 100px;
+		flex-wrap: wrap;
+	}
+	&__link{
+		@include fontText(Raleway, 20px, 500);
+		line-height: 28 / 20 * 100%;
+		color: black;
+	}
+	&__subtitle{
+		@include fontText(Raleway, 25px, 500);
+		line-height: 35 / 25 * 100%;
+		color: black;
+		margin-bottom: 62px;
+	}
+	&__form{
+		&-btn{
+			background-color: #6E9C9F;
+			margin-bottom: 62px;
+		}
+	}
+	&__message{
+		display: inline-block;
+		padding: 30px 76px;
+		background-color: #F1EADC;
+		text-align: center;
+	}
+	&__column:not(:last-child){
+		margin-right: 10px;
+		margin-bottom: 30px;
+	}
+}

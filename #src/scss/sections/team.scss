@@ -1,0 +1,94 @@
+.team{
+	cursor: default;
+	&__inner{
+		padding: 65px 0 130px 0;
+	}
+	&__title{
+		margin-bottom: 92px;
+	}
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: 700px){
+			flex-direction: column;
+		}
+	}
+	&__info{
+		margin-left: 20px;
+		&-text{
+			width: 255px;
+			margin-bottom: 24px;
+			@media (max-width: 700px){
+				width: auto;
+			}
+		}
+		&-title{
+			@include fontText(Raleway, 25px, 500);
+			line-height: 35 / 25 * 100%;
+			margin-bottom: 28px;
+		}
+		@media (max-width: 700px){
+			padding-top: 80px;
+		}
+	}
+	&__slider{
+		position: relative;
+		max-width: 729 / 1110 * 100%;
+		&-img{
+			& img{
+				width: 100%;
+				height: 487px;
+				object-fit: cover;
+			}
+		}
+		@media (max-width: 700px){
+			max-width: 100%;
+		}
+	}
+	&__slider .slick{
+		&-dots{
+			margin-top: 30px;
+			display: flex !important;
+			position: absolute;
+			left: 0;
+			right: 0;
+			justify-content: center;
+			@media (min-width: 1241px){
+				display: none !important;
+			}
+		}
+		&-arrow{
+			position: absolute;
+			top: 50%;
+			font-size: 0;
+			z-index: 1;
+			background-color: transparent;
+			&::before{
+				content: url(../img/team/2.svg);
+			}
+			@media (max-width: 1240px){
+				display: none !important;
+			}
+		}
+		&-next{
+			right: -40px;
+			transition: transform 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					transform: scale(1.2);
+				}
+			}
+		}
+		&-prev{
+			left: -40px;
+			transform: rotate(180deg);
+			transition: transform 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					transform: rotate(180deg) scale(1.2);
+				}
+			}
+		}
+	}
+}
